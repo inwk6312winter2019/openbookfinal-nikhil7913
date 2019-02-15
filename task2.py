@@ -58,3 +58,22 @@ with open(output_filename4, "a") as out_file:
                 print(line)
                 out_file.write(line)
 
+# following code will check Firefox and Chrome requests
+line_regex5 = re.compile(r"Mozilla")
+line_regex6 = re.compile(r"Chrome")
+with open("access.log", "r") as in_file:
+count=0
+   for line in in_file:
+
+       if (line_regex5.search(line)):
+          count=+1
+          print(count)
+               
+with open("access.log", "r") as in_file:
+count1=0
+   for line in in_file:
+
+       if (line_regex5.search(line)):
+          count1=+1
+          print(count1)
+
